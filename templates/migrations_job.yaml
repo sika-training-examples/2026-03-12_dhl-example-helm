@@ -5,6 +5,11 @@ metadata:
   annotations:
     app.openshift.io/connects-to: |
       [{"apiVersion":"apps/v1","kind":"StatefulSet","name":"redis"}]
+    {{ if .Values.enableArgoCDHooks }}
+    argocd.argoproj.io/hook: Sync
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+    argocd.argoproj.io/sync-wave: "-1"
+    {{ else }}
     helm.sh/hook: pre-install,pre-upgrade
     helm.sh/hook-delete-policy: before-hook-creation
 spec:

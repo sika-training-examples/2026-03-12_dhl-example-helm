@@ -5,6 +5,8 @@ hostFrontend:
 hostFrontendGo:
 hostBackupNginx:
 
+enableArgoCDHooks: false
+
 # Backup
 backupSchedule: "0 * * * *"
 
