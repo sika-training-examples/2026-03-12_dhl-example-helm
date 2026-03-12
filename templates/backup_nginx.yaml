@@ -50,8 +50,15 @@ metadata:
   annotations:
     route.openshift.io/termination: "edge"
     route.openshift.io/insecureEdgeTerminationPolicy: "Redirect"
+    cert-manager.io/cluster-issuer: letsencrypt
 spec:
-  ingressClassName: openshift-default
+  ingressClassName: {{ .Values.ingressClassName }}
+  {{ .Values.ingressTls }}
+  tls:
+    - hosts:
+        - {{ .Values.hostBackupNginx }}
+      secretName: {{ .Values.hostBackupNginx }}-tls
+  {{ end }}
   rules:
     - host: {{ .Values.hostBackupNginx }}
       http:

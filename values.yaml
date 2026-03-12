@@ -6,6 +6,9 @@ hostFrontendGo:
 hostBackupNginx:
 
 enableArgoCDHooks: false
+ingressClassName: openshift-default
+ingressTls: false
+consoleLinkEnabled: true
 
 # Backup
 backupSchedule: "0 * * * *"
