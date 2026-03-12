@@ -13,10 +13,13 @@ backupSchedule: "0 * * * *"
 # Backend
 SLOW_START: 0
 EXTRA_TEXT: ''
+backendImage: ghcr.io/ondrejsika/counter
 backendReplicas: 2
 
 # Frontend
 FONT_COLOR: '#D40511'
 BACKGROUND_COLOR: '#FFCC00'
+frontendImage: ghcr.io/ondrejsika/counter-frontend
+goFrontendImage: ghcr.io/ondrejsika/counter-frontend-go
 frontendReplicas: 2
 goFrontendReplicas: 2

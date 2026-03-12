@@ -26,7 +26,7 @@ spec:
             - "sleep 2 && kubectl wait --for=condition=complete --timeout=600s job/migrations"
       containers:
         - name: main
-          image: ttl.sh/dhl/backend
+          image: {{ .Values.backendImage }}
           ports:
             - containerPort: 8000
           env:

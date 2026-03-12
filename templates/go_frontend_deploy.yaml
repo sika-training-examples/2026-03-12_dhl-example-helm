@@ -35,7 +35,7 @@ spec:
             - http://backend
       containers:
         - name: main
-          image: ghcr.io/ondrejsika/counter-frontend-go
+          image: {{ .Values.goFrontendImage }}
           ports:
             - containerPort: 3000
           envFrom:
