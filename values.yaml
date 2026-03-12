@@ -13,7 +13,10 @@ backupSchedule: "0 * * * *"
 # Backend
 SLOW_START: 0
 EXTRA_TEXT: ''
+backendReplicas: 2
 
 # Frontend
 FONT_COLOR: '#D40511'
 BACKGROUND_COLOR: '#FFCC00'
+frontendReplicas: 2
+goFrontendReplicas: 2
