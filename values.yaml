@@ -1,0 +1,17 @@
+# Required
+hostFrontend:
+
+# Optional
+hostFrontendGo:
+hostBackupNginx:
+
+# Backup
+backupSchedule: "0 * * * *"
+
+# Backend
+SLOW_START: 0
+EXTRA_TEXT: ''
+
+# Frontend
+FONT_COLOR: '#D40511'
+BACKGROUND_COLOR: '#FFCC00'
