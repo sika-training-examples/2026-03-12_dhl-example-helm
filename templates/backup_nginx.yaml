@@ -53,7 +53,7 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt
 spec:
   ingressClassName: {{ .Values.ingressClassName }}
-  {{ .Values.ingressTls }}
+  {{ if .Values.ingressTls }}
   tls:
     - hosts:
         - {{ .Values.hostBackupNginx }}
